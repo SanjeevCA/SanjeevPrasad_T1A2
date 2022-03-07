@@ -1,0 +1,31 @@
+.card:hover {
+    
+  // Highlight border on hover
+  outline-color: $mainColour;
+  transition: 0.4s ease-out;
+
+  /* --- Show Card text on hover --- */
+  .slideText {
+    display: block;
+
+    /* Entry Animation */
+    animation-name: slideTextUp;
+    animation-timing-function: 0.4s ease-out;
+    animation-duration: 0.4s;
+
+    background-color: $mainColour;
+  }
+}
+/* --- Entry Animation for the Card Text --- */
+@keyframes slideTextUp {
+  0% {
+    opacity: 0;
+    height: 0%;
+    background-color: $borderColour;
+  }
+  100% {
+    opacity: 1;
+    height: 20%;
+    background-color: $mainColour;
+  }
+}

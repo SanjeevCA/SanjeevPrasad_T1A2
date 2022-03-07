@@ -1,46 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Raleway:wght@400;500;700&display=swap");
+@media (max-width: 480px) {
+  body {
+    background-color: red;
+  }
+}
+
 @media (min-width: 481px) {
+  body {
+    background-color: orange;
+  }
+}
+
+@media (min-width: 768px) {
   body {
     padding: 0px 40px 0px 40px;
     margin: 0;
     background-color: wheat;
   }
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    text-decoration: none;
-    height: 12vh;
-    padding-bottom: 20px;
-  }
-  header a {
-    text-decoration: none;
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    font-size: 3.4em;
-    color: #ff255b;
-  }
-  header nav a {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 1.4em;
-    font-weight: 500;
-    color: #313131;
-    font-family: "Raleway", sans-serif;
-  }
+  /* --- Home Page Pillars --- */
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 75vh;
+    height: 65vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -50,16 +32,17 @@
   .container .card {
     background-color: salmon;
     color: white;
-    margin: 0 2% 0 2%;
-    padding: 15px;
-    width: 15%;
+    margin: 0 1.5vw 0 1.5vw;
+    min-width: 15%;
+    width: 18%;
     border-radius: 10px;
-    outline: 3px solid #313131;
+    outline: 2px solid #313131;
     outline-offset: 5px;
     text-align: center;
     font-family: "Fraunces", serif;
     text-decoration: none;
     font-size: 1.2vw;
+    /* --- Title text that slides in when the Card container is hovered over --- */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -71,46 +54,134 @@
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .container .card h1 {
-    margin: -5%;
+  .container .card .slideText {
+    display: none;
+    background-color: #313131;
+    height: 20%;
+    border-radius: 0 0 10px 10px;
   }
-  #designCard {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, wheat), color-stop(50%, rgba(255, 0, 0, 0))), url("./images/ph_design.jpg");
-    background-image: linear-gradient(0deg, wheat 10%, rgba(255, 0, 0, 0) 50%), url("./images/ph_design.jpg");
-    background-size: cover;
-    background-position: center;
+  .container .card .slideText h1 {
+    margin: -10%;
   }
-  #coderCard {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, wheat), color-stop(50%, rgba(255, 0, 0, 0))), url("./images/ph_code.jpg");
-    background-image: linear-gradient(0deg, wheat 10%, rgba(255, 0, 0, 0) 50%), url("./images/ph_code.jpg");
-    background-size: cover;
-    background-position: center;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  height: 18vh;
+}
+
+header a {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 10vh;
+  letter-spacing: -0.07em;
+  color: #ff255b;
+}
+
+header nav a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.4em;
+  letter-spacing: 0em;
+  font-weight: 500;
+  color: #313131;
+  font-family: "Raleway", sans-serif;
+}
+
+#designCard {
+  background-image: url("./images/ph_design.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#coderCard {
+  background-image: url("./images/ph_code.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#blogCard {
+  background-image: url("./images/ph_blog.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#aboutCard {
+  background-image: url("./images/ph_person.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  bottom: 0px;
+  margin-top: 30px;
+  margin-left: -40px;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  background-color: black;
+  color: wheat;
+  font-family: "Raleway", sans-serif;
+}
+
+footer p {
+  padding-top: 15px;
+}
+
+/* --- Animations imported at the end of the code --- */
+.card:hover {
+  outline-color: #ff255b;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  /* --- Show Card text on hover --- */
+}
+
+.card:hover .slideText {
+  display: block;
+  /* Entry Animation */
+  -webkit-animation-name: slideTextUp;
+          animation-name: slideTextUp;
+  -webkit-animation-timing-function: 0.4s ease-out;
+          animation-timing-function: 0.4s ease-out;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  background-color: #ff255b;
+}
+
+/* --- Entry Animation for the Card Text --- */
+@-webkit-keyframes slideTextUp {
+  0% {
+    opacity: 0;
+    height: 0%;
+    background-color: #313131;
   }
-  #blogCard {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, wheat), color-stop(50%, rgba(255, 0, 0, 0))), url("./images/ph_blog.jpg");
-    background-image: linear-gradient(0deg, wheat 10%, rgba(255, 0, 0, 0) 50%), url("./images/ph_blog.jpg");
-    background-size: cover;
-    background-position: center;
+  100% {
+    opacity: 1;
+    height: 20%;
+    background-color: #ff255b;
   }
-  #aboutCard {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, wheat), color-stop(50%, rgba(255, 0, 0, 0))), url("./images/ph_person.jpg");
-    background-image: linear-gradient(0deg, wheat 10%, rgba(255, 0, 0, 0) 50%), url("./images/ph_person.jpg");
-    background-size: cover;
-    background-position: center;
+}
+@keyframes slideTextUp {
+  0% {
+    opacity: 0;
+    height: 0%;
+    background-color: #313131;
   }
-  footer {
-    bottom: 0px;
-    margin-top: 30px;
-    margin-left: -40px;
-    width: 100vw;
-    height: 10vh;
-    text-align: center;
-    background-color: black;
-    color: wheat;
-    font-family: "Raleway", sans-serif;
-  }
-  footer p {
-    padding-top: 15px;
+  100% {
+    opacity: 1;
+    height: 20%;
+    background-color: #ff255b;
   }
 }
 /*# sourceMappingURL=style.css.map */
