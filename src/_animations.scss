@@ -1,19 +1,21 @@
-.card:hover {
-    
-  // Highlight border on hover
-  outline-color: $mainColour;
-  transition: 0.4s ease-out;
+// Hover animations only on devices with a Cursor
+@media (min-width: 768px) {
+  .card:hover {
+    // Highlight border on hover
+    outline-color: $mainColour;
+    transition: 0.4s ease-out;
 
-  /* --- Show Card text on hover --- */
-  .slideText {
-    display: block;
+    /* --- Show Card text on hover --- */
+    .slideText {
+      display: block;
 
-    /* Entry Animation */
-    animation-name: slideTextUp;
-    animation-timing-function: 0.4s ease-out;
-    animation-duration: 0.4s;
+      /* Entry Animation */
+      animation-name: slideTextUp;
+      animation-timing-function: 0.4s ease-out;
+      animation-duration: 0.4s;
 
-    background-color: $mainColour;
+      background-color: $mainColour;
+    }
   }
 }
 /* --- Entry Animation for the Card Text --- */

@@ -6,20 +6,75 @@
 
 
 // Phones
-@media (max-width: 480px) {
-    body{
-        background-color: red;
-    }
+@media (max-width: 767px) {
+    body {
+        padding: 0px 40px 0px 40px;
+        margin: 0;
+        background-color: wheat;
+      }
     
+      
+    
+      /* --- Home Page Pillars --- */
+      .container {
+    
+        display: flex;        
+        height: 100vh;
+        justify-content: center;
+        flex-wrap: wrap;
+    
+        .card {
+          background-color: salmon;
+          color: white;
+    
+          margin-bottom: 3vh;
+          //   padding: 15px;
+          //width: 12%;
+          width: 90%;
+          border-radius: 10px;
+    
+          outline: 2px solid $borderColour;
+          outline-offset: 5px;
+    
+          text-align: center;
+          font-family: $h1Font;
+          text-decoration: none;
+          font-size: 2.2vw;
+    
+        /* --- Title text that slides in when the Card container is hovered over --- */
+          .slideText {
+
+            background-color: $borderColour;
+            height: 20%;
+            border-radius: 0 0 10px 10px;
+
+                
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            h1, h3 {
+              
+            }
+    
+            
+          }
+    
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+    
+      }
 }
 
 // Tablets
-@media (min-width: 481px) {
-    body{
-        background-color: orange;
-    }
+// @media (min-width: 481px) {
+//     body{
+//         background-color: orange;
+//     }
     
-}
+// }
 
 // Desktops and above
 @media (min-width: 768px) {
