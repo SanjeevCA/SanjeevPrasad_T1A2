@@ -1,0 +1,140 @@
+// /* Small devices */
+// @media (max-width: 480px) {
+//   body {
+//     padding: 30px;
+//     background-color: black;
+//   }
+
+//   header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//   }
+
+//   .container {
+//     display: flex;
+//     height: 70vh;
+//     justify-content: space-evenly;
+//     flex-wrap: wrap;
+//     .pageBox {
+//       padding: 25px;
+//       background-color: salmon;
+//       width: 80%;
+//       text-align: center;
+//       font-size: 1.4vw;
+//     }
+//   }
+// }
+
+// Import Variables, Fonts and Mixins
+@import "variables";
+@import "mixins";
+
+@media (min-width: 481px) {
+  body {
+    padding: 0px 40px 0px 40px;
+    margin: 0;
+    background-color: wheat;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    text-decoration: none;
+
+    height: 12vh;
+    padding-bottom: 20px;
+
+    a{
+        text-decoration: none;
+        font-family: $h1Font;
+        font-weight: 700;
+        font-size: 3.4em;
+        color: $mainColour;
+    }
+
+    nav{
+        
+
+        a{
+            padding: 10px;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: 500;
+            color: $borderColour;
+            font-family: $mainFont;
+        }
+
+    }
+  }
+
+  .container {
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: salmon;
+      color: white;
+
+      margin: 0 2% 0 2%;
+      padding: 15px;
+      width: 15%;
+      border-radius: 10px;
+
+      outline: 3px solid $borderColour;
+      outline-offset: 5px;
+
+      text-align: center;
+      font-family: $h1Font;
+      text-decoration: none;
+      font-size: 1.2vw;
+
+      h1{
+          margin: -5%;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  #designCard {
+    @include setBackgroundImage("./images/ph_design.jpg");
+  }
+
+  #coderCard {
+    @include setBackgroundImage("./images/ph_code.jpg");
+  }
+
+  #blogCard {
+    @include setBackgroundImage("./images/ph_blog.jpg");
+  }
+
+  #aboutCard {
+    @include setBackgroundImage("./images/ph_person.jpg");
+  }
+
+  footer {
+    bottom: 0px;
+    margin-top: 30px;
+    margin-left: -40px;
+    width: 100vw;
+    
+    height: 10vh;
+    text-align: center;
+    background-color: black;
+    color: wheat;
+    font-family: $mainFont;
+
+    p{
+        padding-top: 15px;
+    }
+  }
+}

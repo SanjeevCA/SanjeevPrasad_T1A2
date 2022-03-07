@@ -1,0 +1,6 @@
+@mixin setBackgroundImage ($imageURL){
+        background-image: linear-gradient(0deg, wheat 10%, rgba(255,0,0,0) 50%), url($imageURL);
+        // mix-blend-mode: luminosity;
+        background-size: cover;
+        background-position: center;
+}
