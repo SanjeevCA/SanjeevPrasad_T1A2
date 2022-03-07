@@ -1,80 +1,41 @@
-// /* Small devices */
-// @media (max-width: 480px) {
-//   body {
-//     padding: 30px;
-//     background-color: black;
-//   }
-
-//   header {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//   }
-
-//   .container {
-//     display: flex;
-//     height: 70vh;
-//     justify-content: space-evenly;
-//     flex-wrap: wrap;
-//     .pageBox {
-//       padding: 25px;
-//       background-color: salmon;
-//       width: 80%;
-//       text-align: center;
-//       font-size: 1.4vw;
-//     }
-//   }
-// }
 
 // Import Variables, Fonts and Mixins
 @import "variables";
 @import "mixins";
 
+
+
+// Phones
+@media (max-width: 480px) {
+    body{
+        background-color: red;
+    }
+    
+}
+
+// Tablets
 @media (min-width: 481px) {
+    body{
+        background-color: orange;
+    }
+    
+}
+
+// Desktops and above
+@media (min-width: 768px) {
   body {
     padding: 0px 40px 0px 40px;
     margin: 0;
     background-color: wheat;
   }
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  
 
-    text-decoration: none;
-
-    height: 12vh;
-    padding-bottom: 20px;
-
-    a{
-        text-decoration: none;
-        font-family: $h1Font;
-        font-weight: 700;
-        font-size: 3.4em;
-        color: $mainColour;
-    }
-
-    nav{
-        
-
-        a{
-            padding: 10px;
-            text-decoration: none;
-            font-size: 1.4em;
-            font-weight: 500;
-            color: $borderColour;
-            font-family: $mainFont;
-        }
-
-    }
-  }
-
+  /* --- Home Page Pillars --- */
   .container {
+
     display: flex;
-    height: 75vh;
+    height: 65vh;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -82,12 +43,14 @@
       background-color: salmon;
       color: white;
 
-      margin: 0 2% 0 2%;
-      padding: 15px;
-      width: 15%;
+      margin: 0 1.5vw 0 1.5vw;
+      //   padding: 15px;
+      //width: 12%;
+      min-width: 15%;
+      width: 18%;
       border-radius: 10px;
 
-      outline: 3px solid $borderColour;
+      outline: 2px solid $borderColour;
       outline-offset: 5px;
 
       text-align: center;
@@ -95,17 +58,64 @@
       text-decoration: none;
       font-size: 1.2vw;
 
-      h1{
-          margin: -5%;
+    /* --- Title text that slides in when the Card container is hovered over --- */
+      .slideText {
+        display: none;
+        background-color: $borderColour;
+        height: 20%;
+        border-radius: 0 0 10px 10px;
+        
+        h1 {
+          margin: -10%;
+        }
+
+        
       }
 
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
     }
+
   }
 
-  #designCard {
+
+}
+
+// General CSS 
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+
+    height: 18vh;
+
+    a {
+      text-decoration: none;
+      font-family: $h1Font;
+      font-weight: 700;
+      font-size: 10vh;
+      letter-spacing: -0.07em;
+      color: $mainColour;
+    }
+
+    nav {
+      a {
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.4em;
+        letter-spacing: 0em;
+        font-weight: 500;
+        color: $borderColour;
+        font-family: $mainFont;
+      }
+    }
+  }
+  
+#designCard {
     @include setBackgroundImage("./images/ph_design.jpg");
   }
 
@@ -126,15 +136,17 @@
     margin-top: 30px;
     margin-left: -40px;
     width: 100vw;
-    
+
     height: 10vh;
     text-align: center;
     background-color: black;
     color: wheat;
     font-family: $mainFont;
 
-    p{
-        padding-top: 15px;
+    p {
+      padding-top: 15px;
     }
   }
-}
+
+  /* --- Animations imported at the end of the code --- */
+  @import "animations";
