@@ -1,5 +1,5 @@
 // Hover animations only on devices with a Cursor
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .card:hover {
     // Highlight border on hover
     outline-color: $mainColour;
@@ -27,7 +27,7 @@
   }
   100% {
     opacity: 1;
-    height: 20%;
+    height: $slideTextHeight;
     background-color: $mainColour;
   }
 }
