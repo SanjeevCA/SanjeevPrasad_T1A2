@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Raleway:wght@400;500;700&display=swap");
 @media (max-width: 767px) {
   body {
-    padding: 0px 40px 0px 40px;
     margin: 0;
     background-color: wheat;
   }
@@ -10,7 +9,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -20,7 +18,8 @@
   .container .card {
     background-color: salmon;
     color: white;
-    margin-bottom: 3vh;
+    height: 35vh;
+    margin-bottom: 5vh;
     width: 90%;
     border-radius: 10px;
     outline: 2px solid #313131;
@@ -59,23 +58,24 @@
 
 @media (min-width: 768px) {
   body {
-    padding: 0px 40px 0px 40px;
     margin: 0;
     background-color: wheat;
   }
-  /* --- Home Page Pillars --- */
+  /* --- Main content container --- */
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 65vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    /* --- Homepage cards --- */
+    /* --- Blog posts --- */
   }
   .container .card {
+    height: 70vh;
     background-color: salmon;
     color: white;
     margin: 0 1.5vw 0 1.5vw;
@@ -108,6 +108,41 @@
   }
   .container .card .slideText h1 {
     margin: -10%;
+  }
+  .container .blogPost {
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 3%;
+    padding: 15px;
+    border-radius: 10px;
+    outline: 2px solid #313131;
+    outline-offset: 5px;
+  }
+  .container .blogPost h1,
+  .container .blogPost h4 {
+    width: 100%;
+    margin: 5px 0 5px 0;
+    font-family: "Fraunces", serif;
+  }
+  .container .blogPost .postImage {
+    width: 30%;
+  }
+  .container .blogPost .postImage img {
+    width: 100%;
+  }
+  .container .blogPost p {
+    font-family: "Raleway", sans-serif;
+    font-size: .9em;
+    width: 68%;
+    margin-top: 0;
+    text-align: justify;
   }
 }
 
@@ -170,10 +205,7 @@ header nav a {
 }
 
 footer {
-  bottom: 0px;
-  margin-top: 30px;
-  margin-left: -40px;
-  width: 100vw;
+  margin-top: auto;
   height: 10vh;
   text-align: center;
   background-color: black;

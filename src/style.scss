@@ -1,71 +1,61 @@
-
 // Import Variables, Fonts and Mixins
 @import "variables";
 @import "mixins";
 
-
-
 // Phones
 @media (max-width: 767px) {
-    body {
-        padding: 0px 40px 0px 40px;
-        margin: 0;
-        background-color: wheat;
-      }
-    
-      
-    
-      /* --- Home Page Pillars --- */
-      .container {
-    
-        display: flex;        
-        height: 100vh;
+  body {
+    // padding: 0px 40px 0px 40px;
+    margin: 0;
+    background-color: wheat;
+  }
+
+  /* --- Home Page Pillars --- */
+  .container {
+    display: flex;
+    // height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: salmon;
+      color: white;
+
+      height: 35vh;
+      margin-bottom: 5vh;
+      //   padding: 15px;
+      //width: 12%;
+      width: 90%;
+      border-radius: 10px;
+
+      outline: 2px solid $borderColour;
+      outline-offset: 5px;
+
+      text-align: center;
+      font-family: $h1Font;
+      text-decoration: none;
+      font-size: 2.2vw;
+
+      /* --- Title text that slides in when the Card container is hovered over --- */
+      .slideText {
+        background-color: $borderColour;
+        height: 20%;
+        border-radius: 0 0 10px 10px;
+
+        display: flex;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-    
-        .card {
-          background-color: salmon;
-          color: white;
-    
-          margin-bottom: 3vh;
-          //   padding: 15px;
-          //width: 12%;
-          width: 90%;
-          border-radius: 10px;
-    
-          outline: 2px solid $borderColour;
-          outline-offset: 5px;
-    
-          text-align: center;
-          font-family: $h1Font;
-          text-decoration: none;
-          font-size: 2.2vw;
-    
-        /* --- Title text that slides in when the Card container is hovered over --- */
-          .slideText {
 
-            background-color: $borderColour;
-            height: 20%;
-            border-radius: 0 0 10px 10px;
-
-                
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            h1, h3 {
-              
-            }
-    
-            
-          }
-    
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-        }
-    
+        // h1,
+        // h3 {
+        // }
       }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
 }
 
 // Tablets
@@ -73,28 +63,30 @@
 //     body{
 //         background-color: orange;
 //     }
-    
+
 // }
 
 // Desktops and above
 @media (min-width: 768px) {
   body {
-    padding: 0px 40px 0px 40px;
+    // padding: 0px 40px 0px 40px;
     margin: 0;
     background-color: wheat;
   }
 
-  
-
-  /* --- Home Page Pillars --- */
+  /* --- Main content container --- */
   .container {
-
     display: flex;
-    height: 65vh;
+    // height: 65vh;
     justify-content: center;
     flex-wrap: wrap;
 
+    /* --- Homepage cards --- */
     .card {
+      
+      // Set card heights
+      height: 70vh;
+
       background-color: salmon;
       color: white;
 
@@ -113,18 +105,16 @@
       text-decoration: none;
       font-size: 1.2vw;
 
-    /* --- Title text that slides in when the Card container is hovered over --- */
+      /* --- Title text that slides in when the Card container is hovered over --- */
       .slideText {
         display: none;
         background-color: $borderColour;
         height: 20%;
         border-radius: 0 0 10px 10px;
-        
+
         h1 {
           margin: -10%;
         }
-
-        
       }
 
       display: flex;
@@ -132,76 +122,109 @@
       justify-content: flex-end;
     }
 
-  }
+    /* --- Blog posts --- */
+    .blogPost {
+      width: 75%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 3%;
+      padding: 15px;
 
+      // border style
+      border-radius: 10px;
+      outline: 2px solid $borderColour;
+      outline-offset: 5px;
 
-}
+      h1,
+      h4 {
+        width: 100%;
+        margin: 5px 0 5px 0;
+        font-family: $h1Font;
+      }
+      .postImage {
+        // overflow: hidden;
+        width: 30%;
+        
+        img {
+          width: 100%;
+        }
+      }
 
-// General CSS 
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-decoration: none;
-
-    height: 18vh;
-
-    a {
-      text-decoration: none;
-      font-family: $h1Font;
-      font-weight: 700;
-      font-size: 10vh;
-      letter-spacing: -0.07em;
-      color: $mainColour;
-    }
-
-    nav {
-      a {
-        padding: 10px;
-        text-decoration: none;
-        font-size: 1.4em;
-        letter-spacing: 0em;
-        font-weight: 500;
-        color: $borderColour;
+      p {
         font-family: $mainFont;
+        font-size: .9em;
+        width: 68%;
+        margin-top: 0;
+        text-align: justify;
       }
     }
   }
-  
-#designCard {
-    @include setBackgroundImage("./images/ph_design.jpg");
+}
+
+// General CSS
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  height: 18vh;
+
+  a {
+    text-decoration: none;
+    font-family: $h1Font;
+    font-weight: 700;
+    font-size: 10vh;
+    letter-spacing: -0.07em;
+    color: $mainColour;
   }
 
-  #coderCard {
-    @include setBackgroundImage("./images/ph_code.jpg");
-  }
-
-  #blogCard {
-    @include setBackgroundImage("./images/ph_blog.jpg");
-  }
-
-  #aboutCard {
-    @include setBackgroundImage("./images/ph_person.jpg");
-  }
-
-  footer {
-    bottom: 0px;
-    margin-top: 30px;
-    margin-left: -40px;
-    width: 100vw;
-
-    height: 10vh;
-    text-align: center;
-    background-color: black;
-    color: wheat;
-    font-family: $mainFont;
-
-    p {
-      padding-top: 15px;
+  nav {
+    a {
+      padding: 10px;
+      text-decoration: none;
+      font-size: 1.4em;
+      letter-spacing: 0em;
+      font-weight: 500;
+      color: $borderColour;
+      font-family: $mainFont;
     }
   }
+}
 
-  /* --- Animations imported at the end of the code --- */
-  @import "animations";
+#designCard {
+  @include setBackgroundImage("./images/ph_design.jpg");
+}
+
+#coderCard {
+  @include setBackgroundImage("./images/ph_code.jpg");
+}
+
+#blogCard {
+  @include setBackgroundImage("./images/ph_blog.jpg");
+}
+
+#aboutCard {
+  @include setBackgroundImage("./images/ph_person.jpg");
+}
+
+footer {
+  margin-top: auto;
+  // margin-top: 30px;
+
+  height: 10vh;
+  text-align: center;
+  background-color: black;
+  color: wheat;
+  font-family: $mainFont;
+
+  p {
+    padding-top: 15px;
+  }
+}
+
+/* --- Animations imported at the end of the code --- */
+@import "animations";
