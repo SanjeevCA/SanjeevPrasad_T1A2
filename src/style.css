@@ -162,7 +162,7 @@ footer p {
   display: flex;
 }
 
-.blogPost .postImage img {
+.blogPost .postImage img, .blogPost .postImage video {
   width: 100%;
 }
 
@@ -197,9 +197,9 @@ footer p {
     margin-top: -5vh;
   }
   #blogContainer .blogPost .postImage {
-    height: 45vh;
+    height: 55vh;
   }
-  #blogContainer .blogPost .postImage img {
+  #blogContainer .blogPost .postImage img, #blogContainer .blogPost .postImage video {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -256,8 +256,13 @@ footer p {
   #blogContainer .blogPost .postImage {
     height: auto;
     width: 48%;
-    -o-object-fit: fill;
-       object-fit: fill;
+  }
+  #blogContainer .blogPost .postImage img, #blogContainer .blogPost .postImage video {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
   #blogContainer .blogPost .postText {
     width: 48%;

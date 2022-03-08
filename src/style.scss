@@ -150,7 +150,7 @@ footer {
     width: 100%;    
     overflow:hidden;
     display: flex;
-    img {
+    img, video {
       width:100%;
     }
   }
@@ -199,9 +199,9 @@ footer {
     .blogPost {
             
       .postImage {        
-        height: 45vh;
+        height: 55vh;
 
-        img{
+        img, video{
           align-self: center;
         }
       }
@@ -297,10 +297,12 @@ footer {
         height: auto;
         width: 48%;
         
-        // Still not happy with how the image looks on certain screen sizes. Something needs to be done here.
-        object-fit: fill;
-        // img{
-        // }
+        // Resize image to fit the container while keeping ratio and cropping sides
+        img, video{
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
       }
       .postText {
         width: 48%;
