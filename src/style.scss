@@ -2,8 +2,6 @@
 @import "variables";
 @import "mixins";
 
-// Phones
-//@media (max-width: 767px) {
 
 // Styling for phones and above
 
@@ -48,6 +46,7 @@ body {
   background-color: $backgroundColour;
   margin: 0;
   height: 100%;
+  justify-content: center;
 }
 
 // Home page card styling
@@ -122,7 +121,7 @@ footer {
   // margin-top: auto;
   height: 10vh;
   text-align: center;
-  background-color: black;
+  background-color: $borderColour;
   color: wheat;
   font-family: $mainFont;
 
@@ -132,26 +131,28 @@ footer {
 }
 
 // Blog Styling
-.blogPost {
+.post {
   width: 75%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  
+  justify-content: center;
+
   margin-top: 6vh;
   padding: 8px;
 
   // border style
   border-radius: 10px;
-  outline: 2px solid $borderColour;
+  outline: 3px solid $borderColour;
   outline-offset: 5px;
 
   .postImage {
-    width: 100%;    
-    overflow:hidden;
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    img, video {
-      width:100%;
+    img,
+    video {
+      width: 100%;
     }
   }
   .postText {
@@ -166,6 +167,22 @@ footer {
       margin-top: 0;
       text-align: justify;
     }
+  }
+}
+
+// Design Collage Styling
+#collage {
+  img {
+    height: 30vh;
+    max-width: 95%;
+    flex-grow: 1;
+    object-fit: cover;
+    margin: 10px;
+
+    // border & shadow styling
+    border-radius: 10px;
+    outline: 3px solid $borderColour;
+    box-shadow: 4px 4px 0 4px $borderColour;
   }
 }
 
@@ -195,13 +212,13 @@ footer {
   // Blog container styling for larger screens
   #blogContainer {
     margin-top: -5vh;
-    
-    .blogPost {
-            
-      .postImage {        
+
+    .post {
+      .postImage {
         height: 55vh;
 
-        img, video{
+        img,
+        video {
           align-self: center;
         }
       }
@@ -290,15 +307,16 @@ footer {
   #blogContainer {
     margin-top: -5vh;
 
-    .blogPost {
+    .post {
       justify-content: space-between;
       align-items: stretch;
       .postImage {
         height: auto;
         width: 48%;
-        
+
         // Resize image to fit the container while keeping ratio and cropping sides
-        img, video{
+        img,
+        video {
           height: 100%;
           object-fit: cover;
           object-position: center;
@@ -309,6 +327,13 @@ footer {
         font-size: 1em;
       }
     }
+  }
+
+  #collage {    
+    margin-top: -5vh;
+      img {
+        max-width: 100%;
+      }
   }
 }
 
@@ -347,19 +372,18 @@ footer {
   #blogContainer {
     margin-top: -5vh;
 
-    .blogPost {
+    .post {
       justify-content: space-between;
       align-items: stretch;
       padding: 25px;
       .postImage {
         height: auto;
         width: 30%;
-        img{
+        img {
           // height: 100%;
         }
       }
       .postText {
-        
         width: 68%;
         font-size: 1.8em;
       }

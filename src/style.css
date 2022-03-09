@@ -44,6 +44,9 @@ body {
   background-color: wheat;
   margin: 0;
   height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #designCard {
@@ -130,7 +133,7 @@ body {
 footer {
   height: 10vh;
   text-align: center;
-  background-color: black;
+  background-color: #313131;
   color: wheat;
   font-family: "Raleway", sans-serif;
 }
@@ -139,7 +142,7 @@ footer p {
   padding-top: 15px;
 }
 
-.blogPost {
+.post {
   width: 75%;
   height: 100%;
   display: -webkit-box;
@@ -147,14 +150,17 @@ footer p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 6vh;
   padding: 8px;
   border-radius: 10px;
-  outline: 2px solid #313131;
+  outline: 3px solid #313131;
   outline-offset: 5px;
 }
 
-.blogPost .postImage {
+.post .postImage {
   width: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -162,21 +168,37 @@ footer p {
   display: flex;
 }
 
-.blogPost .postImage img, .blogPost .postImage video {
+.post .postImage img,
+.post .postImage video {
   width: 100%;
 }
 
-.blogPost .postText h1,
-.blogPost .postText h4 {
+.post .postText h1,
+.post .postText h4 {
   margin: 5px 0 5px 0;
   font-family: "Fraunces", serif;
 }
 
-.blogPost .postText p {
+.post .postText p {
   font-family: "Raleway", sans-serif;
   font-size: 0.8em;
   margin-top: 0;
   text-align: justify;
+}
+
+#collage img {
+  height: 30vh;
+  max-width: 95%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px;
+  border-radius: 10px;
+  outline: 3px solid #313131;
+  -webkit-box-shadow: 4px 4px 0 4px #313131;
+          box-shadow: 4px 4px 0 4px #313131;
 }
 
 @media (min-width: 481px) {
@@ -196,15 +218,16 @@ footer p {
   #blogContainer {
     margin-top: -5vh;
   }
-  #blogContainer .blogPost .postImage {
+  #blogContainer .post .postImage {
     height: 55vh;
   }
-  #blogContainer .blogPost .postImage img, #blogContainer .blogPost .postImage video {
+  #blogContainer .post .postImage img,
+  #blogContainer .post .postImage video {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  #blogContainer .blogPost .postText {
+  #blogContainer .post .postText {
     height: 100%;
     font-size: 1em;
   }
@@ -245,7 +268,7 @@ footer p {
   #blogContainer {
     margin-top: -5vh;
   }
-  #blogContainer .blogPost {
+  #blogContainer .post {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -253,20 +276,27 @@ footer p {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  #blogContainer .blogPost .postImage {
+  #blogContainer .post .postImage {
     height: auto;
     width: 48%;
   }
-  #blogContainer .blogPost .postImage img, #blogContainer .blogPost .postImage video {
+  #blogContainer .post .postImage img,
+  #blogContainer .post .postImage video {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
   }
-  #blogContainer .blogPost .postText {
+  #blogContainer .post .postText {
     width: 48%;
     font-size: 1em;
+  }
+  #collage {
+    margin-top: -5vh;
+  }
+  #collage img {
+    max-width: 100%;
   }
 }
 
@@ -293,7 +323,7 @@ footer p {
   #blogContainer {
     margin-top: -5vh;
   }
-  #blogContainer .blogPost {
+  #blogContainer .post {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -302,11 +332,11 @@ footer p {
             align-items: stretch;
     padding: 25px;
   }
-  #blogContainer .blogPost .postImage {
+  #blogContainer .post .postImage {
     height: auto;
     width: 30%;
   }
-  #blogContainer .blogPost .postText {
+  #blogContainer .post .postText {
     width: 68%;
     font-size: 1.8em;
   }
