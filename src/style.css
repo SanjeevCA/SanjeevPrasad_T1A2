@@ -171,6 +171,7 @@ footer p {
 .post .postImage img,
 .post .postImage video {
   width: 100%;
+  border-radius: 10px;
 }
 
 .post .postText h1,
@@ -184,6 +185,66 @@ footer p {
   font-size: 0.8em;
   margin-top: 0;
   text-align: justify;
+}
+
+.aboutGrid {
+  width: 80%;
+  margin-top: 5vh;
+}
+
+.aboutGrid h1,
+.aboutGrid h4 {
+  margin: 5px 0 5px 0;
+  font-family: "Fraunces", serif;
+}
+
+.aboutGrid p {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  margin-top: 0;
+  text-align: justify;
+}
+
+.aboutGrid .profilePic {
+  border-radius: 10px;
+  outline: 3px solid #313131;
+  outline-offset: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35%;
+  padding: 18px;
+}
+
+.aboutGrid .profilePic img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.aboutGrid .introText {
+  padding: 18px;
+  margin-top: 4vh;
+  border-radius: 10px;
+  outline: 3px solid #313131;
+  outline-offset: 5px;
+}
+
+.aboutGrid .skillsText {
+  padding: 18px;
+  margin-top: 4vh;
+  border-radius: 10px;
+  outline: 3px solid #313131;
+  outline-offset: 5px;
+}
+
+.aboutGrid .contact {
+  padding: 18px;
+  margin-top: 4vh;
+  border-radius: 10px;
+  outline: 3px solid #313131;
+  outline-offset: 5px;
 }
 
 #collage img {
@@ -230,6 +291,9 @@ footer p {
   #blogContainer .post .postText {
     height: 100%;
     font-size: 1em;
+  }
+  .aboutGrid {
+    margin-top: 0;
   }
 }
 
@@ -297,6 +361,49 @@ footer p {
   }
   #collage img {
     max-width: 100%;
+  }
+  .aboutGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 6fr;
+        grid-template-columns: 4fr 6fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 35px 35px;
+    grid-auto-flow: row;
+        grid-template-areas: "profilePic introText" "profilePic skillsText" "profilePic contact";
+  }
+  .aboutGrid h1,
+  .aboutGrid h4 {
+    font-size: 2.5em;
+  }
+  .aboutGrid p {
+    font-size: 1.4em;
+  }
+  .aboutGrid .profilePic {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    grid-area: profilePic;
+    height: auto;
+  }
+  .aboutGrid .introText {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: introText;
+    margin-top: 0;
+  }
+  .aboutGrid .skillsText {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: skillsText;
+    margin-top: 0;
+  }
+  .aboutGrid .contact {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: contact;
+    margin-top: 0;
   }
 }
 

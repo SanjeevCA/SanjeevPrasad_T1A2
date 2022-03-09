@@ -2,7 +2,6 @@
 @import "variables";
 @import "mixins";
 
-
 // Styling for phones and above
 
 // Header and Navbar styling
@@ -153,6 +152,7 @@ footer {
     img,
     video {
       width: 100%;
+      border-radius: 10px;
     }
   }
   .postText {
@@ -167,6 +167,55 @@ footer {
       margin-top: 0;
       text-align: justify;
     }
+  }
+}
+
+// About Grid
+.aboutGrid {
+  width: 80%;
+  margin-top: 5vh;
+  // Text styling
+  h1,
+  h4 {
+    margin: 5px 0 5px 0;
+    font-family: $h1Font;
+  }
+  p {
+    font-family: $mainFont;
+    font-size: 0.8em;
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  .profilePic {
+    @include borderStyle;    
+    
+    display: flex;
+    height: 35%;
+    padding: 18px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .introText {
+    padding: 18px;
+    margin-top: 4vh;
+    @include borderStyle;
+  }
+
+  .skillsText {
+    padding: 18px;
+    margin-top: 4vh;
+    @include borderStyle;
+  }
+
+  .contact {
+    padding: 18px;
+    margin-top: 4vh;
+    @include borderStyle;
   }
 }
 
@@ -227,6 +276,10 @@ footer {
         font-size: 1em;
       }
     }
+  }
+
+  .aboutGrid {
+    margin-top: 0;
   }
 }
 
@@ -329,11 +382,54 @@ footer {
     }
   }
 
-  #collage {    
+  #collage {
     margin-top: -5vh;
-      img {
-        max-width: 100%;
-      }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // About me for larger screens
+  .aboutGrid {
+    
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 35px 35px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "profilePic introText"
+      "profilePic skillsText"
+      "profilePic contact";
+
+    // Text styling
+    h1,
+    h4 {
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.4em;
+    }
+
+    .profilePic {      
+      grid-area: profilePic;
+      height: auto; // Prevent image from breaking out of the grid layout
+    }
+
+    .introText {
+      grid-area: introText;
+      margin-top: 0;
+    }
+
+    .skillsText {
+      grid-area: skillsText;
+      margin-top: 0;
+    }
+
+    .contact {
+      grid-area: contact;
+      margin-top: 0;
+    }
   }
 }
 
@@ -379,9 +475,6 @@ footer {
       .postImage {
         height: auto;
         width: 30%;
-        img {
-          // height: 100%;
-        }
       }
       .postText {
         width: 68%;
