@@ -31,7 +31,9 @@ header nav {
 }
 
 header nav a {
-  padding: 5px;
+  padding: 4px;
+  margin: 0 8px 0 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 1.1em;
   letter-spacing: 0em;
@@ -41,7 +43,7 @@ header nav a {
 }
 
 body {
-  background-color: wheat;
+  background-color: #fceed4;
   margin: 0;
   height: 100%;
   -webkit-box-pack: center;
@@ -467,6 +469,17 @@ footer p {
     -webkit-animation-duration: 0.4s;
             animation-duration: 0.4s;
     background-color: #ff255b;
+  }
+  .pageTitle:hover {
+    color: #ff9b18;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+  }
+  nav a:hover {
+    outline: 3px solid #ff255b;
+    color: #ff255b;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
   }
 }
 

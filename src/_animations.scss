@@ -17,6 +17,17 @@
       background-color: $mainColour;
     }
   }
+
+  .pageTitle:hover {
+    color: rgb(255, 155, 24);
+    transition: 0.2s ease-out;
+  }
+
+  nav a:hover {
+    outline: 3px solid $mainColour;
+    color: $mainColour;
+    transition: 0.2s ease-out;
+  }
 }
 /* --- Entry Animation for the Card Text --- */
 @keyframes slideTextUp {
