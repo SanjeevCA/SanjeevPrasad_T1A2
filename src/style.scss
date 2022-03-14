@@ -27,13 +27,13 @@ header {
   }
 
   nav {
-    margin-top: 3vh;
+    margin-top: 2vh;
     a {
       padding: 4px;
       margin: 0 8px 0 8px;
       border-radius: 10px;
       text-decoration: none;
-      font-size: 1.1em;
+      font-size: 1.4em;
       letter-spacing: 0em;
       font-weight: 500;
       color: $borderColour;
@@ -46,8 +46,14 @@ header {
 body {
   background-color: $backgroundColour;
   margin: 0;
-  height: 100%;
-  justify-content: center;
+  height: 100vh;
+}
+
+#homeBody {
+  // Span the content vertically on the screen
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 // Main Content Container
@@ -97,7 +103,6 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
     }
 
     // Image or Video styling for Card art
@@ -115,16 +120,16 @@ body {
 
 // Footer styling
 footer {
-  // margin-top: auto;
-  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 8vh;
+  margin-top: 4vh;
   text-align: center;
   background-color: $borderColour;
-  color: wheat;
+  color: $backgroundColour;
   font-family: $mainFont;
 
-  p {
-    padding-top: 15px;
-  }
 }
 
 // Blog Styling
@@ -189,7 +194,7 @@ footer {
     @include borderStyle;
 
     display: flex;
-    height: 35%;
+    height: 20%;
     padding: 18px;
     img {
       width: 100%;
@@ -214,6 +219,52 @@ footer {
     padding: 18px;
     margin-top: 4vh;
     @include borderStyle;
+  }
+
+  .flexContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 30px 0 30px 0;
+
+    // Remove padding from unordered list
+    padding-inline-start: 0;
+
+    .skills {
+      list-style-type: none;
+      font-family: $linkFont;
+      font-weight: $linkWeight;
+      font-size: 0.9em;
+      text-align: center;
+
+      padding: 15px 20px 15px 20px;
+      margin-bottom: 2%;
+
+      background-color: $borderColour;
+      color: $backgroundColour;
+      border-radius: 10px;
+    }
+
+    .contactLink {
+      text-decoration: 0;
+      font-family: $linkFont;
+      font-weight: $linkWeight;
+      font-size: 2.4em;
+      text-align: center;
+
+      width: 15%;
+      padding: 15px;
+      margin-bottom: 2%;
+
+      background-color: $mainColour;
+      color: $backgroundColour;
+      border-radius: 10px;
+    }
+
+    #resumeButton {
+      font-size: 1em;
+      line-height: 1em;
+    }
   }
 }
 
@@ -254,8 +305,6 @@ footer {
 
   // Blog container styling for larger screens
   #blogContainer {
-    margin-top: -5vh;
-
     .post {
       .postImage {
         height: 55vh;
@@ -286,13 +335,14 @@ footer {
   }
   .container {
     .card {
-      // Set card sizes for large screens
-      margin: 1.5vw;
-      height: 65vh;
+      // Set card sizes
+      margin: 1.7vw;
+      height: 55vh;
       min-width: 15%;
-      width: 18%;
+      width: 16%;
+      
 
-      outline-offset: 15px;
+      outline-offset: 12px;
 
       // Return border colour to normal when mouse leaves hover
       outline-color: $borderColour;
@@ -302,7 +352,7 @@ footer {
       .slideText {
         height: $slideTextHeight;
 
-        font-size: 1.2em;
+        font-size: .8em;
 
         // Exit Animation
         animation-name: slideTextDown;
@@ -352,9 +402,10 @@ footer {
 
   // About me for larger screens
   .aboutGrid {
+    margin-top: 5vh;
     display: grid;
     grid-template-columns: 4fr 6fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 0fr 1fr 0fr;
     gap: 35px 35px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -365,10 +416,10 @@ footer {
     // Text styling
     h1,
     h4 {
-      font-size: 2.5em;
+      font-size: 2em;
     }
     p {
-      font-size: 1.4em;
+      font-size: 1em;
     }
 
     .profilePic {
@@ -390,6 +441,18 @@ footer {
       grid-area: contact;
       margin-top: 0;
     }
+
+    .flexContainer {
+      .skills {
+        font-size: 1.4em;
+        padding: 15px 20px 15px 20px;
+        margin-bottom: 2%;
+      }
+
+      .contactLink {
+        font-size: 2.4em;
+      }
+    }
   }
 }
 
@@ -406,18 +469,16 @@ footer {
   }
 
   .container {
+    margin-top: -2%;
     .card {
       // Set card sizes
       margin: 1.5vw;
-      height: 65vh;
+      height: 60vh;
       min-width: 15%;
       width: 18%;
 
       .slideText {
-        
-
         font-size: 1.8em;
-
       }
     }
   }
@@ -436,6 +497,33 @@ footer {
       .postText {
         width: 68%;
         font-size: 1.8em;
+      }
+    }
+  }
+
+  .aboutGrid {
+    // Text styling
+    h1,
+    h4 {
+      font-size: 2.4em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+
+    .flexContainer {
+      .skills {
+        font-size: 2.4em;
+        padding: 25px 40px 25px 40px;
+        margin-bottom: 2%;
+      }
+
+      .contactLink {
+        font-size: 2.4em;
+      }
+
+      #resumeButton {
+        font-size: 1.6em;
       }
     }
   }

@@ -27,7 +27,7 @@ header .pageTitle {
 }
 
 header nav {
-  margin-top: 3vh;
+  margin-top: 2vh;
 }
 
 header nav a {
@@ -35,7 +35,7 @@ header nav a {
   margin: 0 8px 0 8px;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.4em;
   letter-spacing: 0em;
   font-weight: 500;
   color: #313131;
@@ -45,10 +45,20 @@ header nav a {
 body {
   background-color: #fceed4;
   margin: 0;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100vh;
+}
+
+#homeBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container {
@@ -127,15 +137,22 @@ body {
 }
 
 footer {
-  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 8vh;
+  margin-top: 4vh;
   text-align: center;
   background-color: #313131;
-  color: wheat;
+  color: #fceed4;
   font-family: "Raleway", sans-serif;
-}
-
-footer p {
-  padding-top: 15px;
 }
 
 .post {
@@ -208,7 +225,7 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 35%;
+  height: 20%;
   padding: 18px;
 }
 
@@ -243,6 +260,53 @@ footer p {
   outline-offset: 5px;
 }
 
+.aboutGrid .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0 30px 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.aboutGrid .flexContainer .skills {
+  list-style-type: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 15px 20px 15px 20px;
+  margin-bottom: 2%;
+  background-color: #313131;
+  color: #fceed4;
+  border-radius: 10px;
+}
+
+.aboutGrid .flexContainer .contactLink {
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 2.4em;
+  text-align: center;
+  width: 15%;
+  padding: 15px;
+  margin-bottom: 2%;
+  background-color: #ff255b;
+  color: #fceed4;
+  border-radius: 10px;
+}
+
+.aboutGrid .flexContainer #resumeButton {
+  font-size: 1em;
+  line-height: 1em;
+}
+
 #collage img {
   height: 30vh;
   max-width: 95%;
@@ -268,9 +332,6 @@ footer p {
   .container .card .slideText {
     font-size: 1.1em;
   }
-  #blogContainer {
-    margin-top: -5vh;
-  }
   #blogContainer .post .postImage {
     height: 55vh;
   }
@@ -294,11 +355,11 @@ footer p {
     font-size: 12vh;
   }
   .container .card {
-    margin: 1.5vw;
-    height: 65vh;
+    margin: 1.7vw;
+    height: 55vh;
     min-width: 15%;
-    width: 18%;
-    outline-offset: 15px;
+    width: 16%;
+    outline-offset: 12px;
     outline-color: #313131;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
@@ -306,7 +367,7 @@ footer p {
   }
   .container .card .slideText {
     height: 25%;
-    font-size: 1.2em;
+    font-size: .8em;
     -webkit-animation-name: slideTextDown;
             animation-name: slideTextDown;
     -webkit-animation-timing-function: 0.4s ease-out;
@@ -349,22 +410,23 @@ footer p {
     max-width: 100%;
   }
   .aboutGrid {
+    margin-top: 5vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 4fr 6fr;
         grid-template-columns: 4fr 6fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-rows: 0fr 1fr 0fr;
+        grid-template-rows: 0fr 1fr 0fr;
     gap: 35px 35px;
     grid-auto-flow: row;
         grid-template-areas: "profilePic introText" "profilePic skillsText" "profilePic contact";
   }
   .aboutGrid h1,
   .aboutGrid h4 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .aboutGrid p {
-    font-size: 1.4em;
+    font-size: 1em;
   }
   .aboutGrid .profilePic {
     -ms-grid-row: 1;
@@ -391,6 +453,14 @@ footer p {
     grid-area: contact;
     margin-top: 0;
   }
+  .aboutGrid .flexContainer .skills {
+    font-size: 1.4em;
+    padding: 15px 20px 15px 20px;
+    margin-bottom: 2%;
+  }
+  .aboutGrid .flexContainer .contactLink {
+    font-size: 2.4em;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -399,9 +469,12 @@ footer p {
     text-decoration: none;
     font-size: 1.6em;
   }
+  .container {
+    margin-top: -2%;
+  }
   .container .card {
     margin: 1.5vw;
-    height: 65vh;
+    height: 60vh;
     min-width: 15%;
     width: 18%;
   }
@@ -427,6 +500,24 @@ footer p {
   #blogContainer .post .postText {
     width: 68%;
     font-size: 1.8em;
+  }
+  .aboutGrid h1,
+  .aboutGrid h4 {
+    font-size: 2.4em;
+  }
+  .aboutGrid p {
+    font-size: 1.5em;
+  }
+  .aboutGrid .flexContainer .skills {
+    font-size: 2.4em;
+    padding: 25px 40px 25px 40px;
+    margin-bottom: 2%;
+  }
+  .aboutGrid .flexContainer .contactLink {
+    font-size: 2.4em;
+  }
+  .aboutGrid .flexContainer #resumeButton {
+    font-size: 1.6em;
   }
 }
 

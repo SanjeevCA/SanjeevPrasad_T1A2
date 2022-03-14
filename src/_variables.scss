@@ -1,9 +1,9 @@
 // Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Raleway:wght@400;500;700&display=swap');
 
-$backgroundColour: rgb(252, 238, 212);
+$backgroundColour: #fceed4;
 $borderColour: rgb(49, 49, 49);
-$mainColour: rgb(255, 37, 91);
+$mainColour: #ff255b;
 
 $mainFont: 'Raleway', sans-serif;
 
@@ -12,5 +12,8 @@ $h1Weight: 900;
 
 $h3Font: 'Fraunces', serif;
 $h3Weight: 600;
+
+$linkFont: 'Raleway', sans-serif;
+$linkWeight: 600;
 
 $slideTextHeight: 25%;
