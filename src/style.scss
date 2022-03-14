@@ -30,10 +30,10 @@ header {
     margin-top: 2vh;
     a {
       padding: 4px;
-      margin: 0 8px 0 8px;
+      margin: 0 4px 0 4px;
       border-radius: 10px;
       text-decoration: none;
-      font-size: 1.4em;
+      font-size: 5vw;
       letter-spacing: 0em;
       font-weight: 500;
       color: $borderColour;
@@ -129,7 +129,6 @@ footer {
   background-color: $borderColour;
   color: $backgroundColour;
   font-family: $mainFont;
-
 }
 
 // Blog Styling
@@ -159,15 +158,22 @@ footer {
     }
   }
   .postText {
-    h1,
-    h4 {
+    h1 {
       margin: 5px 0 5px 0;
       font-family: $h1Font;
+      font-size: 1.9em;
+    }
+    h4{
+      margin: 5px 0 5px 0;
+      font-family: $h3Font;
+      font-size: 1em;
+      letter-spacing: .2em;
+      font-weight: 600;
     }
     p {
       font-family: $mainFont;
-      font-size: 0.8em;
-      margin-top: 0;
+      font-size: 1em;
+      margin-top: 15px;
       text-align: justify;
     }
   }
@@ -185,7 +191,7 @@ footer {
   }
   p {
     font-family: $mainFont;
-    font-size: 0.8em;
+    font-size: 1.2em;
     margin-top: 0;
     text-align: justify;
   }
@@ -286,7 +292,27 @@ footer {
 
 // Styling for tablets and above
 @media (min-width: 481px) {
+  header {
+    .pageTitle {
+      font-size: 13vw;
+    }
+    nav {
+      a {
+        padding: 4px;
+        margin: 0 8px 0 8px;
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  #homeBody {
+    .container {
+      margin-top: 2vh;
+    }
+  }
+
   .container {
+    margin-top: -4vh;
     .card {
       // Sizing
       height: 35vh;
@@ -307,8 +333,6 @@ footer {
   #blogContainer {
     .post {
       .postImage {
-        height: 55vh;
-
         img,
         video {
           align-self: center;
@@ -340,7 +364,6 @@ footer {
       height: 55vh;
       min-width: 15%;
       width: 16%;
-      
 
       outline-offset: 12px;
 
@@ -352,7 +375,7 @@ footer {
       .slideText {
         height: $slideTextHeight;
 
-        font-size: .8em;
+        font-size: 0.8em;
 
         // Exit Animation
         animation-name: slideTextDown;
@@ -375,9 +398,9 @@ footer {
       justify-content: space-between;
       align-items: stretch;
       .postImage {
-        height: auto;
         width: 48%;
-
+        height: 100%;
+        overflow: hidden;
         // Resize image to fit the container while keeping ratio and cropping sides
         img,
         video {

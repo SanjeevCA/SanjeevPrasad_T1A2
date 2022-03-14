@@ -32,10 +32,10 @@ header nav {
 
 header nav a {
   padding: 4px;
-  margin: 0 8px 0 8px;
+  margin: 0 4px 0 4px;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 1.4em;
+  font-size: 5vw;
   letter-spacing: 0em;
   font-weight: 500;
   color: #313131;
@@ -187,16 +187,24 @@ footer {
   border-radius: 10px;
 }
 
-.post .postText h1,
-.post .postText h4 {
+.post .postText h1 {
   margin: 5px 0 5px 0;
   font-family: "Fraunces", serif;
+  font-size: 1.9em;
+}
+
+.post .postText h4 {
+  margin: 5px 0 5px 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  letter-spacing: .2em;
+  font-weight: 600;
 }
 
 .post .postText p {
   font-family: "Raleway", sans-serif;
-  font-size: 0.8em;
-  margin-top: 0;
+  font-size: 1em;
+  margin-top: 15px;
   text-align: justify;
 }
 
@@ -213,7 +221,7 @@ footer {
 
 .aboutGrid p {
   font-family: "Raleway", sans-serif;
-  font-size: 0.8em;
+  font-size: 1.2em;
   margin-top: 0;
   text-align: justify;
 }
@@ -323,6 +331,20 @@ footer {
 }
 
 @media (min-width: 481px) {
+  header .pageTitle {
+    font-size: 13vw;
+  }
+  header nav a {
+    padding: 4px;
+    margin: 0 8px 0 8px;
+    font-size: 1.4em;
+  }
+  #homeBody .container {
+    margin-top: 2vh;
+  }
+  .container {
+    margin-top: -4vh;
+  }
   .container .card {
     height: 35vh;
     width: 80%;
@@ -331,9 +353,6 @@ footer {
   }
   .container .card .slideText {
     font-size: 1.1em;
-  }
-  #blogContainer .post .postImage {
-    height: 55vh;
   }
   #blogContainer .post .postImage img,
   #blogContainer .post .postImage video {
@@ -367,7 +386,7 @@ footer {
   }
   .container .card .slideText {
     height: 25%;
-    font-size: .8em;
+    font-size: 0.8em;
     -webkit-animation-name: slideTextDown;
             animation-name: slideTextDown;
     -webkit-animation-timing-function: 0.4s ease-out;
@@ -388,8 +407,9 @@ footer {
             align-items: stretch;
   }
   #blogContainer .post .postImage {
-    height: auto;
     width: 48%;
+    height: 100%;
+    overflow: hidden;
   }
   #blogContainer .post .postImage img,
   #blogContainer .post .postImage video {
