@@ -129,9 +129,9 @@ body {
 }
 
 .container .card .mediaBox .media {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
   -o-object-fit: cover;
      object-fit: cover;
 }
