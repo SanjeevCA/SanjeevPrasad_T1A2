@@ -16,7 +16,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
-  height: 22vh;
   padding-top: 5vh;
 }
 
@@ -152,12 +151,30 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 8vh;
-  margin-top: 4vh;
   text-align: center;
   background-color: #313131;
   color: #fceed4;
   font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+footer .footerSocials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+footer .footerSocials a {
+  font-size: 1em;
+  margin: 0 6px 0 6px;
+  text-decoration: none;
+  color: #fceed4;
 }
 
 .post {
@@ -415,7 +432,7 @@ footer {
     font-size: 1.4em;
   }
   #blogContainer {
-    margin-top: -5vh;
+    margin: 1vh 0 4vh 0;
   }
   #blogContainer .post {
     -ms-flex-line-pack: stretch;
@@ -444,10 +461,13 @@ footer {
     font-size: 1em;
   }
   #collage {
-    margin-top: -5vh;
+    margin: 1vh 0 4vh 0;
   }
   #collage img {
     max-width: 100%;
+  }
+  #aboutContainer {
+    margin: 1vh 0 4vh 0;
   }
   .aboutGrid {
     margin-top: 5vh;
@@ -516,20 +536,15 @@ footer {
     text-decoration: none;
     font-size: 1.6em;
   }
-  .container {
-    margin-top: -2%;
-  }
   .container .card {
     margin: 1.5vw;
-    height: 60vh;
+    margin-top: 0;
+    height: 63vh;
     min-width: 15%;
     width: 18%;
   }
   .container .card .slideText h1 {
     font-size: 2.9em;
-  }
-  #blogContainer {
-    margin-top: -5vh;
   }
   #blogContainer .post {
     padding: 25px;

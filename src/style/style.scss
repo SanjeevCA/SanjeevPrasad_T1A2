@@ -16,7 +16,7 @@ header {
 
   text-decoration: none;
 
-  height: 22vh;
+  // height: 22vh;
   padding-top: 5vh;
 
   .pageTitle {
@@ -127,12 +127,25 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 8vh;
-  margin-top: 4vh;
   text-align: center;
   background-color: $borderColour;
   color: $backgroundColour;
   font-family: $mainFont;
+  font-size: 0.8em;
+  font-weight: 400;
+
+  .footerSocials {
+    display: flex;
+    justify-content: center;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    a {
+      font-size: 1em;
+      margin: 0 6px 0 6px;
+      text-decoration: none;
+      color: $backgroundColour;
+    }
+  }
 }
 
 // Blog Styling
@@ -417,7 +430,7 @@ footer {
 
   // Blog container styling for larger screens
   #blogContainer {
-    margin-top: -5vh;
+    margin: 1vh 0 4vh 0;
 
     .post {
       // justify-content: space-between;
@@ -444,10 +457,14 @@ footer {
   }
 
   #collage {
-    margin-top: -5vh;
+    margin: 1vh 0 4vh 0;
     img {
       max-width: 100%;
     }
+  }
+
+  #aboutContainer {
+    margin: 1vh 0 4vh 0;
   }
 
   // About me for larger screens
@@ -506,7 +523,7 @@ footer {
         label {
           display: none;
           line-height: 1.3em;
-          cursor: pointer; // Make the text look clickable          
+          cursor: pointer; // Make the text look clickable
         }
       }
     }
@@ -526,11 +543,11 @@ footer {
   }
 
   .container {
-    margin-top: -2%;
     .card {
       // Set card sizes
       margin: 1.5vw;
-      height: 60vh;
+      margin-top: 0;
+      height: 63vh;
       min-width: 15%;
       width: 18%;
 
@@ -543,8 +560,6 @@ footer {
   }
 
   #blogContainer {
-    margin-top: -5vh;
-
     .post {
       padding: 25px;
       .postImage {
@@ -574,7 +589,7 @@ footer {
       }
 
       .contactLink {
-        width: 17%;     
+        width: 17%;
         font-size: 2.4em;
       }
     }
