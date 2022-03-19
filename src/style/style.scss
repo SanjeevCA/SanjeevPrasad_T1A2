@@ -96,7 +96,7 @@ body {
       background-color: $borderColour;
       height: $slideTextHeight;
       border-radius: 0 0 10px 10px;
-
+      
       text-align: center;
       font-family: $h1Font;
       font-size: 1em;
@@ -154,7 +154,7 @@ footer {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
+  justify-content: center;
 
   margin-top: 6vh;
   padding: 8px;
@@ -178,7 +178,9 @@ footer {
     h1 {
       margin: 5px 0 5px 0;
       font-family: $h1Font;
-      font-size: 1.9em;
+      font-size: 1.7em;
+      line-height: 1em;
+      letter-spacing: -0.03em;
     }
     h4 {
       margin: 5px 0 5px 0;
@@ -198,13 +200,14 @@ footer {
 
 // About Grid
 .aboutGrid {
-  width: 80%;
+  width: 77%;
   margin-top: 5vh;
   // Text styling
   h1,
   h4 {
     margin: 5px 0 5px 0;
     font-family: $h1Font;
+    letter-spacing: -0.03em;
   }
   p {
     font-family: $mainFont;
@@ -366,7 +369,7 @@ footer {
   }
 
   .aboutGrid {
-    margin-top: 0;
+    margin-top: 8vh;
     .contact {
       .flexContainer {
         .contactLink {
@@ -512,7 +515,7 @@ footer {
     .flexContainer {
       .skills {
         font-size: 1.4em;
-        padding: 15px 20px 15px 20px;
+        padding: 15px 24px 15px 24px;
         margin-bottom: 2%;
       }
 

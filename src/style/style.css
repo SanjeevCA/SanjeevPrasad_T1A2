@@ -185,6 +185,9 @@ footer .footerSocials a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 6vh;
   padding: 8px;
   border-radius: 10px;
@@ -206,7 +209,9 @@ footer .footerSocials a {
 .post .postText h1 {
   margin: 5px 0 5px 0;
   font-family: "Fraunces", serif;
-  font-size: 1.9em;
+  font-size: 1.7em;
+  line-height: 1em;
+  letter-spacing: -0.03em;
 }
 
 .post .postText h4 {
@@ -225,7 +230,7 @@ footer .footerSocials a {
 }
 
 .aboutGrid {
-  width: 80%;
+  width: 77%;
   margin-top: 5vh;
 }
 
@@ -233,6 +238,7 @@ footer .footerSocials a {
 .aboutGrid h4 {
   margin: 5px 0 5px 0;
   font-family: "Fraunces", serif;
+  letter-spacing: -0.03em;
 }
 
 .aboutGrid p {
@@ -389,7 +395,7 @@ footer .footerSocials a {
     font-size: 1em;
   }
   .aboutGrid {
-    margin-top: 0;
+    margin-top: 8vh;
   }
   .aboutGrid .contact .flexContainer .contactLink {
     font-size: 2.4em;
@@ -515,7 +521,7 @@ footer .footerSocials a {
   }
   .aboutGrid .flexContainer .skills {
     font-size: 1.4em;
-    padding: 15px 20px 15px 20px;
+    padding: 15px 24px 15px 24px;
     margin-bottom: 2%;
   }
   .aboutGrid .flexContainer .contactLink {
