@@ -1,33 +1,74 @@
 // Hover animations only on devices with a Cursor
 @media (min-width: 1024px) {
+  .post:hover {
+    // Highlight border on hover
+    outline-color: $mainColour;
+
+    .postText {
+      .postTitle {
+        color: $mainColour;
+      }
+    }
+  }
+
   .card:hover {
     // Highlight border on hover
     outline-color: $mainColour;
-    transition: 0.4s ease-out;
-
-    
 
     /* --- Show Card text on hover --- */
     .slideText {
-
       /* Entry Animation */
       animation-name: slideTextUp;
       animation-timing-function: 0.4s ease-out;
-      animation-duration: 0.4s;
 
       background-color: $mainColour;
     }
   }
 
   .pageTitle:hover {
-    color: rgb(255, 155, 24);
+    color: $secondaryColour;
     transition: 0.2s ease-out;
   }
 
   nav a:hover {
-    outline: 3px solid $mainColour;
-    color: $mainColour;
-    transition: 0.2s ease-out;
+    color: $backgroundColour;
+    background-color: $secondaryColour;
+  }
+
+  // Zoom Images on hover
+  #collage {
+    .post {
+      img:hover {
+        outline-color: $mainColour;
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  // About page section hover
+  .aboutGrid {
+    .profilePic:hover,
+    .introText:hover,
+    .skillsText:hover,
+    .contact:hover {
+      outline-color: $mainColour;
+    }
+
+    .contact {
+      .flexContainer {
+        
+        // Contact Links show text on hover
+        .contactLink:hover {
+          background-color: $secondaryColour;
+          i {
+            display: none;
+          }
+          label {
+            display: flex;
+          }
+        }
+      }
+    }
   }
 }
 /* --- Entry Animation for the Card Text --- */
@@ -51,13 +92,13 @@
     opacity: 1;
     height: $slideTextHeight;
     background-color: $mainColour;
-
   }
   100% {
     opacity: 0;
     height: 0%;
     background-color: $borderColour;
-    
+
     display: none;
   }
 }
+

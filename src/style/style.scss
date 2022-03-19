@@ -2,6 +2,10 @@
 @import "variables";
 @import "mixins";
 
+* {
+  transition: 0.4s ease-out;
+}
+
 // Styling for phones and above
 
 // Header and Navbar styling
@@ -32,12 +36,12 @@ header {
       padding: 4px;
       margin: 0 4px 0 4px;
       border-radius: 10px;
-      text-decoration: none;
       font-size: 5vw;
       letter-spacing: 0em;
       font-weight: 500;
       color: $borderColour;
       font-family: $mainFont;
+      text-decoration: none;
     }
   }
 }
@@ -95,7 +99,7 @@ body {
 
       text-align: center;
       font-family: $h1Font;
-      font-size: 1.2em;
+      font-size: 1em;
 
       // Keep state after animation ends
       animation-fill-mode: forwards;
@@ -137,7 +141,7 @@ footer {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  // justify-content: center;
 
   margin-top: 6vh;
   padding: 8px;
@@ -150,7 +154,7 @@ footer {
   .postImage {
     width: 100%;
     overflow: hidden;
-    display: flex;
+    // display: flex;
     img,
     video {
       width: 100%;
@@ -163,11 +167,11 @@ footer {
       font-family: $h1Font;
       font-size: 1.9em;
     }
-    h4{
+    h4 {
       margin: 5px 0 5px 0;
       font-family: $h3Font;
       font-size: 1em;
-      letter-spacing: .2em;
+      letter-spacing: 0.2em;
       font-weight: 600;
     }
     p {
@@ -256,20 +260,23 @@ footer {
       font-family: $linkFont;
       font-weight: $linkWeight;
       font-size: 2.4em;
-      text-align: center;
 
-      width: 15%;
-      padding: 15px;
-      margin-bottom: 2%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+
+      width: 25%;
+      padding: 15px 15px 0 15px;
+      margin-bottom: 3%;
 
       background-color: $mainColour;
       color: $backgroundColour;
       border-radius: 10px;
-    }
-
-    #resumeButton {
-      font-size: 1em;
-      line-height: 1em;
+      line-height: 0.8em;
+      label {
+        font-size: 0.4em;
+      }
     }
   }
 }
@@ -286,7 +293,7 @@ footer {
     // border & shadow styling
     border-radius: 10px;
     outline: 3px solid $borderColour;
-    box-shadow: 4px 4px 0 4px $borderColour;
+    //box-shadow: 4px 4px 0 4px $borderColour;
   }
 }
 
@@ -347,6 +354,17 @@ footer {
 
   .aboutGrid {
     margin-top: 0;
+    .contact {
+      .flexContainer {
+        .contactLink {
+          font-size: 2.4em;
+          line-height: 1.2em;
+          label {
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -355,6 +373,11 @@ footer {
   header {
     .pageTitle {
       font-size: 12vh;
+    }
+    nav {
+      a {
+        padding: 7px;
+      }
     }
   }
   .container {
@@ -375,7 +398,9 @@ footer {
       .slideText {
         height: $slideTextHeight;
 
-        font-size: 0.8em;
+        h1 {
+          font-size: 1.4em;
+        }
 
         // Exit Animation
         animation-name: slideTextDown;
@@ -395,12 +420,13 @@ footer {
     margin-top: -5vh;
 
     .post {
-      justify-content: space-between;
-      align-items: stretch;
+      // justify-content: space-between;
+      align-content: stretch;
       .postImage {
-        width: 48%;
-        height: 100%;
+        flex: 1;
+        padding-right: 0.7em;
         overflow: hidden;
+
         // Resize image to fit the container while keeping ratio and cropping sides
         img,
         video {
@@ -410,7 +436,8 @@ footer {
         }
       }
       .postText {
-        width: 48%;
+        flex: 2;
+        padding-left: 0.7em;
         font-size: 1em;
       }
     }
@@ -473,7 +500,14 @@ footer {
       }
 
       .contactLink {
-        font-size: 2.4em;
+        font-size: 1.5em;
+        padding: 25px;
+        width: 14%;
+        label {
+          display: none;
+          line-height: 1.3em;
+          cursor: pointer; // Make the text look clickable          
+        }
       }
     }
   }
@@ -484,7 +518,7 @@ footer {
   header {
     nav {
       a {
-        padding: 15px;
+        padding: 12px;
         text-decoration: none;
         font-size: 1.6em;
       }
@@ -501,7 +535,9 @@ footer {
       width: 18%;
 
       .slideText {
-        font-size: 1.8em;
+        h1 {
+          font-size: 2.9em;
+        }
       }
     }
   }
@@ -510,15 +546,11 @@ footer {
     margin-top: -5vh;
 
     .post {
-      justify-content: space-between;
-      align-items: stretch;
       padding: 25px;
       .postImage {
-        height: auto;
-        width: 30%;
+        width: 100%;
       }
       .postText {
-        width: 68%;
         font-size: 1.8em;
       }
     }
@@ -542,11 +574,8 @@ footer {
       }
 
       .contactLink {
+        width: 17%;     
         font-size: 2.4em;
-      }
-
-      #resumeButton {
-        font-size: 1.6em;
       }
     }
   }

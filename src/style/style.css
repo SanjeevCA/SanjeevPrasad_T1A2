@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Raleway:wght@400;500;700&display=swap");
+* {
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,12 +39,12 @@ header nav a {
   padding: 4px;
   margin: 0 4px 0 4px;
   border-radius: 10px;
-  text-decoration: none;
   font-size: 5vw;
   letter-spacing: 0em;
   font-weight: 500;
   color: #313131;
   font-family: "Raleway", sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -103,7 +108,7 @@ body {
   border-radius: 0 0 10px 10px;
   text-align: center;
   font-family: "Fraunces", serif;
-  font-size: 1.2em;
+  font-size: 1em;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   display: -webkit-box;
@@ -163,9 +168,6 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 6vh;
   padding: 8px;
   border-radius: 10px;
@@ -176,9 +178,6 @@ footer {
 .post .postImage {
   width: 100%;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .post .postImage img,
@@ -197,7 +196,7 @@ footer {
   margin: 5px 0 5px 0;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-weight: 600;
 }
 
@@ -301,18 +300,28 @@ footer {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 2.4em;
-  text-align: center;
-  width: 15%;
-  padding: 15px;
-  margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 25%;
+  padding: 15px 15px 0 15px;
+  margin-bottom: 3%;
   background-color: #ff255b;
   color: #fceed4;
   border-radius: 10px;
+  line-height: 0.8em;
 }
 
-.aboutGrid .flexContainer #resumeButton {
-  font-size: 1em;
-  line-height: 1em;
+.aboutGrid .flexContainer .contactLink label {
+  font-size: 0.4em;
 }
 
 #collage img {
@@ -326,8 +335,6 @@ footer {
   margin: 10px;
   border-radius: 10px;
   outline: 3px solid #313131;
-  -webkit-box-shadow: 4px 4px 0 4px #313131;
-          box-shadow: 4px 4px 0 4px #313131;
 }
 
 @media (min-width: 481px) {
@@ -367,11 +374,21 @@ footer {
   .aboutGrid {
     margin-top: 0;
   }
+  .aboutGrid .contact .flexContainer .contactLink {
+    font-size: 2.4em;
+    line-height: 1.2em;
+  }
+  .aboutGrid .contact .flexContainer .contactLink label {
+    font-size: 0.7em;
+  }
 }
 
 @media (min-width: 1024px) {
   header .pageTitle {
     font-size: 12vh;
+  }
+  header nav a {
+    padding: 7px;
   }
   .container .card {
     margin: 1.7vw;
@@ -386,7 +403,6 @@ footer {
   }
   .container .card .slideText {
     height: 25%;
-    font-size: 0.8em;
     -webkit-animation-name: slideTextDown;
             animation-name: slideTextDown;
     -webkit-animation-timing-function: 0.4s ease-out;
@@ -395,20 +411,21 @@ footer {
             animation-duration: 0.4s;
     background-color: #ff255b;
   }
+  .container .card .slideText h1 {
+    font-size: 1.4em;
+  }
   #blogContainer {
     margin-top: -5vh;
   }
   #blogContainer .post {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
   }
   #blogContainer .post .postImage {
-    width: 48%;
-    height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-right: 0.7em;
     overflow: hidden;
   }
   #blogContainer .post .postImage img,
@@ -420,7 +437,10 @@ footer {
        object-position: center;
   }
   #blogContainer .post .postText {
-    width: 48%;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    padding-left: 0.7em;
     font-size: 1em;
   }
   #collage {
@@ -479,13 +499,20 @@ footer {
     margin-bottom: 2%;
   }
   .aboutGrid .flexContainer .contactLink {
-    font-size: 2.4em;
+    font-size: 1.5em;
+    padding: 25px;
+    width: 14%;
+  }
+  .aboutGrid .flexContainer .contactLink label {
+    display: none;
+    line-height: 1.3em;
+    cursor: pointer;
   }
 }
 
 @media (min-width: 1440px) {
   header nav a {
-    padding: 15px;
+    padding: 12px;
     text-decoration: none;
     font-size: 1.6em;
   }
@@ -498,27 +525,19 @@ footer {
     min-width: 15%;
     width: 18%;
   }
-  .container .card .slideText {
-    font-size: 1.8em;
+  .container .card .slideText h1 {
+    font-size: 2.9em;
   }
   #blogContainer {
     margin-top: -5vh;
   }
   #blogContainer .post {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
     padding: 25px;
   }
   #blogContainer .post .postImage {
-    height: auto;
-    width: 30%;
+    width: 100%;
   }
   #blogContainer .post .postText {
-    width: 68%;
     font-size: 1.8em;
   }
   .aboutGrid h1,
@@ -534,19 +553,21 @@ footer {
     margin-bottom: 2%;
   }
   .aboutGrid .flexContainer .contactLink {
+    width: 17%;
     font-size: 2.4em;
-  }
-  .aboutGrid .flexContainer #resumeButton {
-    font-size: 1.6em;
   }
 }
 
 /* --- Animations imported at the end of the code --- */
 @media (min-width: 1024px) {
+  .post:hover {
+    outline-color: #ff255b;
+  }
+  .post:hover .postText .postTitle {
+    color: #ff255b;
+  }
   .card:hover {
     outline-color: #ff255b;
-    -webkit-transition: 0.4s ease-out;
-    transition: 0.4s ease-out;
     /* --- Show Card text on hover --- */
   }
   .card:hover .slideText {
@@ -555,20 +576,38 @@ footer {
             animation-name: slideTextUp;
     -webkit-animation-timing-function: 0.4s ease-out;
             animation-timing-function: 0.4s ease-out;
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
     background-color: #ff255b;
   }
   .pageTitle:hover {
-    color: #ff9b18;
+    color: #462177;
     -webkit-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
   }
   nav a:hover {
-    outline: 3px solid #ff255b;
-    color: #ff255b;
-    -webkit-transition: 0.2s ease-out;
-    transition: 0.2s ease-out;
+    color: #fceed4;
+    background-color: #462177;
+  }
+  #collage .post img:hover {
+    outline-color: #ff255b;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .aboutGrid .profilePic:hover,
+  .aboutGrid .introText:hover,
+  .aboutGrid .skillsText:hover,
+  .aboutGrid .contact:hover {
+    outline-color: #ff255b;
+  }
+  .aboutGrid .contact .flexContainer .contactLink:hover {
+    background-color: #462177;
+  }
+  .aboutGrid .contact .flexContainer .contactLink:hover i {
+    display: none;
+  }
+  .aboutGrid .contact .flexContainer .contactLink:hover label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
