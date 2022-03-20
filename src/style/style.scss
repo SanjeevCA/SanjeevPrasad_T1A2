@@ -2,25 +2,21 @@
 @import "variables";
 @import "mixins";
 
-* {
-  transition: 0.4s ease-out;
-}
-
-// Styling for phones and above
+// ====================================
+// === STYLING FOR PHONES AND ABOVE ===
+// ====================================
 
 // Header and Navbar styling
 header {
+
+  // Layout & Flexbox
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  text-decoration: none;
-
-  // height: 22vh;
   padding-top: 5vh;
 
-  .pageTitle {
-    text-decoration: none;
+  // Page Title text styling
+  .pageTitle {    
     font-family: $h1Font;
     font-weight: 700;
     font-size: 10vh;
@@ -28,8 +24,12 @@ header {
     line-height: 90%;
     letter-spacing: -0.07em;
     color: $mainColour;
+
+    // Remove underline from links
+    text-decoration: none;
   }
 
+  // Navigation Menu Styling
   nav {
     margin-top: 2vh;
     a {
@@ -53,6 +53,7 @@ body {
   height: 100vh;
 }
 
+// Styling specifically for the homepage
 #homeBody {
   // Span the content vertically on the screen
   display: flex;
@@ -62,20 +63,22 @@ body {
 
 // Main Content Container
 .container {
+  // Flexbox & layout
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 2vh 0 4vh 0;
 
+  // Homepage cards styling
   .card {
     // Flexbox
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
+    // Prevent images contained from overflowing the container
     overflow: hidden;
-    background-color: $borderColour;
-
+    
     // Sizing
     height: 30vh;
     margin-bottom: 5vh;
@@ -83,8 +86,8 @@ body {
     border-radius: 10px;
 
     // Decorative
-    background-color: $mainColour;
-    color: white;
+    background-color: $borderColour;
+    color: $backgroundColour;
     outline: 3px solid $borderColour;
     outline-offset: 5px;
 
@@ -93,27 +96,31 @@ body {
 
     // Text for the cards. Slide in on larger devices with a cursor.
     .slideText {
-      background-color: $borderColour;
-      height: $slideTextHeight;
-      border-radius: 0 0 10px 10px;
-      
-      text-align: center;
-      font-family: $h1Font;
-      font-size: 1em;
 
-      // Keep state after animation ends
-      animation-fill-mode: forwards;
-
+      // Layout and Flex
       display: flex;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
+      font-family: $h1Font;
+      font-size: 1em;
+      height: $slideTextHeight;
+
+      // Decorative
+      background-color: $borderColour;
+      border-radius: 0 0 10px 10px;
+
+      // Keep state after animation ends
+      animation-fill-mode: forwards;
     }
 
     // Image or Video styling for Card art
     .mediaBox {
+      // Centre the media within this box
       overflow: hidden;
       display: flex;
       justify-content: center;
+      // Have the media fill the box and hide any that spills out
       .media {
         flex-grow: 3;
         object-fit: cover;
@@ -124,21 +131,28 @@ body {
 
 // Footer styling
 footer {
+
+  // Flex and Layout
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
+  // Decorative Styling
   background-color: $borderColour;
   color: $backgroundColour;
   font-family: $mainFont;
   font-size: 1.2em;
   font-weight: 400;
 
+  // Social links component
   .footerSocials {
+    // Flex layout
     display: flex;
     justify-content: center;
-    margin-top: -5px;
+    margin-top: -12px;
     margin-bottom: 10px;
+    // Icons
     a {
       font-size: 1em;
       margin: 0 6px 0 6px;
@@ -150,31 +164,31 @@ footer {
 
 // Blog Styling
 .post {
+  // Flex and Layout
   width: 75%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   margin-top: 6vh;
   padding: 8px;
 
-  // border style
-  border-radius: 10px;
-  outline: 3px solid $borderColour;
-  outline-offset: 5px;
+  @include borderStyle;
 
+  // Post Media Content
   .postImage {
     width: 100%;
     overflow: hidden;
-    // display: flex;
     img,
     video {
       width: 100%;
       border-radius: 10px;
     }
   }
+
+  // Post Text Content
   .postText {
+    // Post Title
     h1 {
       margin: 5px 0 5px 0;
       font-family: $h1Font;
@@ -182,6 +196,7 @@ footer {
       line-height: 1em;
       letter-spacing: -0.03em;
     }
+    // Post Subtitle/Date
     h4 {
       margin: 5px 0 5px 0;
       font-family: $h3Font;
@@ -189,6 +204,7 @@ footer {
       letter-spacing: 0.2em;
       font-weight: 600;
     }
+    // Post Text
     p {
       font-family: $mainFont;
       font-size: 1em;
@@ -198,10 +214,11 @@ footer {
   }
 }
 
-// About Grid
+// About Page Layout
 .aboutGrid {
   width: 77%;
   margin-top: 5vh;
+
   // Text styling
   h1,
   h4 {
@@ -218,6 +235,7 @@ footer {
     text-align: justify;
   }
 
+  // Content Components
   .profilePic {
     @include borderStyle;
 
@@ -249,6 +267,7 @@ footer {
     @include borderStyle;
   }
 
+  // Flex container for the Skills and Contact Link Components
   .flexContainer {
     display: flex;
     justify-content: space-evenly;
@@ -258,6 +277,7 @@ footer {
     // Remove padding from unordered list
     padding-inline-start: 0;
 
+    // Apply styling for SKILLS TAGS COMPONENT
     .skills {
       list-style-type: none;
       font-family: $linkFont;
@@ -273,6 +293,7 @@ footer {
       border-radius: 10px;
     }
 
+    // CONTACT LINKS COMPONENT
     .contactLink {
       text-decoration: 0;
       font-family: $linkFont;
@@ -315,7 +336,9 @@ footer {
   }
 }
 
-// Styling for tablets and above
+// =====================================
+// === STYLING FOR TABLETS AND ABOVE ===
+// =====================================
 @media (min-width: 481px) {
   header {
     .pageTitle {
@@ -386,8 +409,16 @@ footer {
   }
 }
 
-// Styling for larger screens and above
+// =====================================
+// === STYLING FOR LAPTOPS AND ABOVE ===
+// =====================================
 @media (min-width: 1024px) {
+
+  // Give Transition for all elements for smoother animations
+  * {
+    transition: 0.4s ease-out;
+  }
+
   header {
     .pageTitle {
       font-size: 12vh;
@@ -398,6 +429,7 @@ footer {
       }
     }
   }
+
   .container {
     .card {
       // Set card sizes
@@ -412,7 +444,7 @@ footer {
       outline-color: $borderColour;
       transition: all 0.4s ease-out;
 
-      /* --- Title text that slides in when the Card container is hovered over --- */
+      // Title text that slides in when the Card container is hovered over
       .slideText {
         height: $slideTextHeight;
 
@@ -426,14 +458,9 @@ footer {
         animation-duration: 0.4s;
         background-color: $mainColour;
       }
-
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: flex-end;
     }
   }
 
-  // Blog container styling for larger screens
   #blogContainer {
     margin: 1vh 0 4vh 0;
 
@@ -472,7 +499,7 @@ footer {
     margin: 1vh 0 4vh 0;
   }
 
-  // About me for larger screens
+  // About Page with CSS Grid Layout for larger screens
   .aboutGrid {
     margin-top: 5vh;
     display: grid;
@@ -526,7 +553,7 @@ footer {
         padding: 25px;
         width: 14%;
         label {
-          display: none;
+          display: none; // Label only shows on hover
           line-height: 1.3em;
           cursor: pointer; // Make the text look clickable
         }
@@ -535,7 +562,9 @@ footer {
   }
 }
 
-// Styling for extra large screens and above
+// ===========================================
+// === STYLING FOR LARGE SCREENS AND ABOVE ===
+// ===========================================
 @media (min-width: 1440px) {
   header {
     nav {
@@ -601,5 +630,5 @@ footer {
   }
 }
 
-/* --- Animations imported at the end of the code --- */
+// Animations imported at the end of the code
 @import "animations";

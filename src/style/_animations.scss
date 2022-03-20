@@ -1,7 +1,9 @@
 // Hover animations only on devices with a Cursor
 @media (min-width: 1024px) {
+
+  // Highlight Post border and title on hover
   .post:hover {
-    // Highlight border on hover
+    
     outline-color: $mainColour;
 
     .postText {
@@ -11,31 +13,34 @@
     }
   }
 
+  // Show Link text when hovering over homepage cards
   .card:hover {
     // Highlight border on hover
     outline-color: $mainColour;
 
-    /* --- Show Card text on hover --- */
+    // Show Card text on hover 
     .slideText {
-      /* Entry Animation */
+
+      // Entry Animation      
       animation-name: slideTextUp;
       animation-timing-function: 0.4s ease-out;
-
       background-color: $mainColour;
     }
   }
 
+  // Effect when hovering over page title
   .pageTitle:hover {
     color: $secondaryColour;
     transition: 0.2s ease-out;
   }
 
+  // Effect when hovering over Navbar links
   nav a:hover {
     color: $backgroundColour;
     background-color: $secondaryColour;
   }
 
-  // Zoom Images on hover
+  // Zoom Images on collage hover
   #collage {
     .post {
       img:hover {
@@ -45,7 +50,7 @@
     }
   }
 
-  // About page section hover
+  // Highlight sections on About page when hovering
   .aboutGrid {
     .profilePic:hover,
     .introText:hover,
@@ -59,8 +64,7 @@
 
     .contact {
       .flexContainer {
-
-        // Contact Links show text on hover
+        // Contact Links show label text on hover
         .contactLink:hover {
           background-color: $secondaryColour;
           i {
@@ -74,7 +78,7 @@
     }
   }
 }
-/* --- Entry Animation for the Card Text --- */
+// Entry Animation for the Card Text
 @keyframes slideTextUp {
   0% {
     display: block;
@@ -89,7 +93,7 @@
   }
 }
 
-/* --- Exit Animation for the Card Text --- */
+// Exit Animation for the Card Text
 @keyframes slideTextDown {
   0% {
     opacity: 1;
@@ -100,7 +104,6 @@
     opacity: 0;
     height: 0%;
     background-color: $borderColour;
-
     display: none;
   }
 }
