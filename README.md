@@ -7,9 +7,14 @@
 ## Purpose
 The purpose of the website...
 
+## Target Audience
 
+## Sitemap
+![Site map](./ppt/assets/site-map.jpg)
 ## Functionality / Features
 Some of the features developed for the site...
+
+## Screenshots
 
 ## Components List
 * Page Header
@@ -22,10 +27,9 @@ Some of the features developed for the site...
 * Skills Tags
 * Social Links
 
+## Tech Stack
 
 
-## Sitemap
-The sitemap...
 
 
 
