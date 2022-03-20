@@ -188,6 +188,7 @@ footer {
 
   // Post Text Content
   .postText {
+    color: $borderColour;
     // Post Title
     h1 {
       margin: 5px 0 5px 0;
@@ -216,6 +217,7 @@ footer {
 
 // About Page Layout
 .aboutGrid {
+  height: 100%;
   width: 77%;
   margin-top: 5vh;
 
@@ -227,12 +229,14 @@ footer {
     font-size: 1.7em;
     line-height: 1em;
     letter-spacing: -0.03em;
+    color: $borderColour;
   }
   p {
     font-family: $mainFont;
     font-size: 1.2em;
     margin-top: 0;
     text-align: justify;
+    color: $borderColour;
   }
 
   // Content Components
@@ -316,6 +320,7 @@ footer {
       p {
         font-size: 0.4em;
         margin-bottom: 0;
+        color: $backgroundColour;
       }
     }
   }
@@ -378,24 +383,12 @@ footer {
     }
   }
 
-  // Blog container styling for larger screens
-  #blogContainer {
-    .post {
-      .postImage {
-        img,
-        video {
-          align-self: center;
-        }
-      }
-      .postText {
-        height: 100%;
-        font-size: 1em;
-      }
-    }
+  #aboutContainer{
   }
 
   .aboutGrid {
     margin-top: 8vh;
+    height: 100%;
     .contact {
       .flexContainer {
         .contactLink {
