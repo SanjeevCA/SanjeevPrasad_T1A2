@@ -2,8 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
   <head>
     <!-- Boilerplate HTML -->
     <meta charset="utf-8" />
@@ -25,30 +25,30 @@
     ></script>
   </head>
 
-
-  <!-- HEADER COMPONENT -->
-  <header>
-    <!-- Page Header -->
-    <a href="../index.html" class="pageTitle">Sanj the Man.</a>
-    <!-- Navigation Menu -->
-    <nav>
-      <a href="./design.html">Design</a>
-      <a href="./coder.html">Coding</a>
-      <a href="./blog.html">Blog</a>
-      <a href="./about.html">About</a>
-    </nav>
-  </header>
-
   <!-- BODY CONTENT -->
   <body>
+
+    <!-- HEADER COMPONENT -->
+    <header>
+      <!-- Page Header -->
+      <a href="../index.html" class="pageTitle">Sanj the Man.</a>
+      <!-- Navigation Menu -->
+      <nav>
+        <a href="./design.html">Design</a>
+        <a href="./coder.html">Coding</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </header>
+
     <!-- MAIN CONTAINER COMPONENT -->
     <main class="container" id="aboutContainer">
       <!-- ABOUT PAGE COMPONENT developed with CSS Grid as a test drive-->
-      <article class="aboutGrid">
+      <div class="aboutGrid">
         <!-- The image element -->
-        <section class="profilePic">
+        <aside class="profilePic">
           <img src="../images/sanjeev.jpg" alt="Profile picture" />
-        </section>
+        </aside>
         <!-- Primary text element, with header and text -->
         <section class="introText">
           <h1 class="postTitle">Hey! I'm Sanj!</h1>
@@ -88,45 +88,46 @@
           <div class="flexContainer">
             <a href="https://github.com/SanjeevCA/" class="contactLink">
               <i class="fa-brands fa-github"></i>
-              <label>GitHub</label>
+              <p>GitHub</p>
             </a>
             <a href="https://www.linkedin.com/in/heysanj/" class="contactLink">
               <i class="fa-brands fa-linkedin-in"></i>
-              <label>LinkedIn</label>
+              <p>LinkedIn</p>
             </a>
             <a href="mailto:12109@coderacademy.edu.au" class="contactLink">
               <i class="fa-solid fa-envelope"></i>
-              <label>Email</label>
+              <p>Email</p>
             </a>
             <a href="#" class="contactLink">
               <i class="fa-solid fa-file"></i>
-              <label>Resume</label>
+              <p>Resume</p>
             </a>
           </div>
         </section>
 
-      </article>
+      </div>
     </main>
+
+    <!-- FOOTER COMPONENT -->
+    <footer>
+      <p>&copy; Sanjeev Prasad 2022</p>
+
+      <!-- SOCIAL LINKS COMPONENT (Displayed as icons) -->
+      <div class="footerSocials">
+        <a href="https://github.com/SanjeevCA/">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/heysanj/">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:12109@coderacademy.edu.au">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-file"></i>
+        </a>
+      </div>
+    </footer>
+
   </body>
-
-  <!-- FOOTER COMPONENT -->
-  <footer>
-    <p>&copy Sanjeev Prasad 2022</p>
-
-    <!-- SOCIAL LINKS COMPONENT (Displayed as icons) -->
-    <div class="footerSocials">
-      <a href="https://github.com/SanjeevCA/">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/heysanj/">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-      <a href="mailto:12109@coderacademy.edu.au">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="#">
-        <i class="fa-solid fa-file"></i>
-      </a>
-    </div>
-  </footer>
 </html>

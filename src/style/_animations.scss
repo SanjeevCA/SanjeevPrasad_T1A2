@@ -23,7 +23,8 @@
 
       // Entry Animation      
       animation-name: slideTextUp;
-      animation-timing-function: 0.4s ease-out;
+      animation-timing-function: ease-out;
+      animation-duration: 0.3s;
       background-color: $mainColour;
     }
   }
@@ -70,7 +71,7 @@
           i {
             display: none;
           }
-          label {
+          p {
             display: flex;
           }
         }

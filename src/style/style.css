@@ -338,8 +338,9 @@ footer .footerSocials a {
   line-height: 0.8em;
 }
 
-.aboutGrid .flexContainer .contactLink label {
+.aboutGrid .flexContainer .contactLink p {
   font-size: 0.4em;
+  margin-bottom: 0;
 }
 
 #collage img {
@@ -396,7 +397,7 @@ footer .footerSocials a {
     font-size: 2.4em;
     line-height: 1.2em;
   }
-  .aboutGrid .contact .flexContainer .contactLink label {
+  .aboutGrid .contact .flexContainer .contactLink p {
     font-size: 0.7em;
   }
 }
@@ -426,10 +427,10 @@ footer .footerSocials a {
     height: 25%;
     -webkit-animation-name: slideTextDown;
             animation-name: slideTextDown;
-    -webkit-animation-timing-function: 0.4s ease-out;
-            animation-timing-function: 0.4s ease-out;
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
     background-color: #ff255b;
   }
   .container .card .slideText h1 {
@@ -527,7 +528,7 @@ footer .footerSocials a {
     padding: 25px;
     width: 14%;
   }
-  .aboutGrid .flexContainer .contactLink label {
+  .aboutGrid .flexContainer .contactLink p {
     display: none;
     line-height: 1.3em;
     cursor: pointer;
@@ -590,8 +591,10 @@ footer .footerSocials a {
   .card:hover .slideText {
     -webkit-animation-name: slideTextUp;
             animation-name: slideTextUp;
-    -webkit-animation-timing-function: 0.4s ease-out;
-            animation-timing-function: 0.4s ease-out;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
     background-color: #ff255b;
   }
   .pageTitle:hover {
@@ -626,7 +629,7 @@ footer .footerSocials a {
   .aboutGrid .contact .flexContainer .contactLink:hover i {
     display: none;
   }
-  .aboutGrid .contact .flexContainer .contactLink:hover label {
+  .aboutGrid .contact .flexContainer .contactLink:hover p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

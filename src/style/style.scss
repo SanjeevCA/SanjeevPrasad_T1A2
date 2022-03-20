@@ -313,8 +313,9 @@ footer {
       color: $backgroundColour;
       border-radius: 10px;
       line-height: 0.8em;
-      label {
+      p {
         font-size: 0.4em;
+        margin-bottom: 0;
       }
     }
   }
@@ -400,7 +401,7 @@ footer {
         .contactLink {
           font-size: 2.4em;
           line-height: 1.2em;
-          label {
+          p {
             font-size: 0.7em;
           }
         }
@@ -454,8 +455,8 @@ footer {
 
         // Exit Animation
         animation-name: slideTextDown;
-        animation-timing-function: 0.4s ease-out;
-        animation-duration: 0.4s;
+        animation-timing-function: ease-out;
+        animation-duration: 0.3s;
         background-color: $mainColour;
       }
     }
@@ -552,7 +553,7 @@ footer {
         font-size: 1.5em;
         padding: 25px;
         width: 14%;
-        label {
+        p {
           display: none; // Label only shows on hover
           line-height: 1.3em;
           cursor: pointer; // Make the text look clickable

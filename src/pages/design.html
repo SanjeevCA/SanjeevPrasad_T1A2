@@ -2,8 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
   <head>
     <!-- Boilerplate HTML -->
     <meta charset="utf-8" />
@@ -25,26 +25,27 @@
     ></script>
   </head>
 
-  <!-- HEADER COMPONENT -->
-  <header>
-    <!-- Page Header -->
-    <a href="../index.html" class="pageTitle">Sanj the Designer.</a>
-    <!-- Navigation Menu -->
-    <nav>
-      <a href="./design.html">Design</a>
-      <a href="./coder.html">Coding</a>
-      <a href="./blog.html">Blog</a>
-      <a href="./about.html">About</a>
-    </nav>
-  </header>
-
   <!-- BODY CONTENT -->
   <body>
+
+    <!-- HEADER COMPONENT -->
+    <header>
+      <!-- Page Header -->
+      <a href="../index.html" class="pageTitle">Sanj the Designer.</a>
+      <!-- Navigation Menu -->
+      <nav>
+        <a href="./design.html">Design</a>
+        <a href="./coder.html">Coding</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </header>
+
     <!-- MAIN COLLAGE COMPONENT
          Same container element as other pages, but styled to display a series of images
          in a collage format. The images can be of varying sizes. -->
     <main class="container" id="collage">
-      <section class="post">
+      <div class="post">
         <img src="../images/design/springbrook-poster.jpg" alt="Springbrook Adventure Poster" />
         <img src="../images/design/guasa-hoodie.jpg" alt="GUASA club hoodie" />
         <img src="../images/design/pap-cover-1.jpg" alt="Pride and Prejudice Report Cover" />
@@ -63,28 +64,31 @@
         <img src="../images/design/coffee-poster-2.jpg" alt="Coffee Deal Poster" />
         <img src="../images/design/pap-cover-2.jpg" alt="Pride and Prejudice Report design" />
         <img src="../images/design/ope-shirt.jpg" alt="OPE Club Shirt" />
-      </section>
+      </div>
     </main>
+
+    <!-- FOOTER COMPONENT -->
+    <footer>
+      <p>&copy; Sanjeev Prasad 2022</p>
+
+      <!-- SOCIAL LINKS COMPONENT (Displayed as icons) -->
+      <div class="footerSocials">
+        <a href="https://github.com/SanjeevCA/">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/heysanj/">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:12109@coderacademy.edu.au">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-file"></i>
+        </a>
+      </div>
+    </footer>
+
   </body>
 
-  <!-- FOOTER COMPONENT -->
-  <footer>
-    <p>&copy Sanjeev Prasad 2022</p>
 
-    <!-- SOCIAL LINKS COMPONENT (Displayed as icons) -->
-    <div class="footerSocials">
-      <a href="https://github.com/SanjeevCA/">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/heysanj/">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-      <a href="mailto:12109@coderacademy.edu.au">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="#">
-        <i class="fa-solid fa-file"></i>
-      </a>
-    </div>
-  </footer>
 </html>
