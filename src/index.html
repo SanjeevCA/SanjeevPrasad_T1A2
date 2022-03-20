@@ -8,9 +8,14 @@
     <!-- Boilerplate HTML -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sanjeev Prasad</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title and Icon -->
+    <title>Sanjeev Prasad</title>
+    <link rel="icon" type="image/png" href="./images/page-icon.png" />
+
+    <!-- Link to CSS Stylesheet-->
     <link rel="stylesheet" href="./style/style.css" />
 
     <!-- Link to FontAwesome for icons-->
@@ -19,8 +24,12 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
+  <!-- HEADER COMPONENT -->
   <header>
+    <!-- Page Header -->
     <a href="./index.html" class="pageTitle">Sanjeev.</a>
+    <!-- Navigation Menu -->
     <nav>
       <a href="./pages/design.html">Design</a>
       <a href="./pages/coder.html">Coding</a>
@@ -28,9 +37,15 @@
       <a href="./pages/about.html">About</a>
     </nav>
   </header>
+
+  <!-- BODY CONTENT -->
   <body id="homeBody">
+    <!-- MAIN CONTAINER COMPONENT -->
     <main class="container">
-      <a class="card" id="designCard" href="./pages/design.html">
+      <!-- CARD COMPONENT displaying image/video and text. (Used as a portal to other pages)
+           This component will take the viewers to the Design Portfolio page. -->
+      <a class="card" href="./pages/design.html">
+        <!-- The mediaBox element holds the graphical content that displays on the card -->
         <div class="mediaBox">
           <img
             src="./images/softball_jersey.jpg"
@@ -38,11 +53,14 @@
             class="media"
           />
         </div>
+        <!-- The slideText element displays what page the card links to. It slides up on hover on larger screens -->
         <div class="slideText">
           <h1>The Designer</h1>
         </div>
       </a>
-      <a class="card" id="coderCard" href="./pages/coder.html">
+
+      <!-- CARD COMPONENT - Coding Portfolio Page -->
+      <a class="card" href="./pages/coder.html">
         <div class="mediaBox">
           <video
             class="media"
@@ -55,7 +73,9 @@
           <h1>The Coder</h1>
         </div>
       </a>
-      <a class="card" id="blogCard" href="./pages/blog.html">
+
+      <!-- CARD COMPONENT - Blog Page -->
+      <a class="card" href="./pages/blog.html">
         <div class="mediaBox">
           <video
             class="media"
@@ -68,7 +88,9 @@
           <h1>The Blogger</h1>
         </div>
       </a>
-      <a class="card" id="aboutCard" href="./pages/about.html">
+
+      <!-- CARD COMPONENT - About Me Page -->
+      <a class="card" href="./pages/about.html">
         <div class="mediaBox">
           <img
             src="./images/sanjeev.jpg"
@@ -76,16 +98,18 @@
             class="media"
           />
         </div>
-
         <div class="slideText">
           <h1>The Man</h1>
         </div>
       </a>
     </main>
   </body>
-  <!-- Even though the footer is outside the BODY tags, the footer moves into the BODY tags on the live version -->
+
+  <!-- FOOTER COMPONENT -->
   <footer>
     <p>&copy Sanjeev Prasad 2022</p>
+
+    <!-- Social links displayed as icons -->
     <div class="footerSocials">
       <a href="https://github.com/SanjeevCA/">
         <i class="fa-brands fa-github"></i>

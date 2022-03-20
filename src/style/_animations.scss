@@ -52,11 +52,14 @@
     .skillsText:hover,
     .contact:hover {
       outline-color: $mainColour;
+      h1{
+        color: $mainColour;
+      }
     }
 
     .contact {
       .flexContainer {
-        
+
         // Contact Links show text on hover
         .contactLink:hover {
           background-color: $secondaryColour;

@@ -238,6 +238,8 @@ footer .footerSocials a {
 .aboutGrid h4 {
   margin: 5px 0 5px 0;
   font-family: "Fraunces", serif;
+  font-size: 1.7em;
+  line-height: 1em;
   letter-spacing: -0.03em;
 }
 
@@ -618,6 +620,12 @@ footer .footerSocials a {
   .aboutGrid .skillsText:hover,
   .aboutGrid .contact:hover {
     outline-color: #ff255b;
+  }
+  .aboutGrid .profilePic:hover h1,
+  .aboutGrid .introText:hover h1,
+  .aboutGrid .skillsText:hover h1,
+  .aboutGrid .contact:hover h1 {
+    color: #ff255b;
   }
   .aboutGrid .contact .flexContainer .contactLink:hover {
     background-color: #462177;
